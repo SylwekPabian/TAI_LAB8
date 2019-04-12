@@ -1,0 +1,6 @@
+<input #input type="text" class="form-control">
+
+<ul class="list-group list-group-flush" style="align-items: center" style="font-size: 75%">
+  <li *ngFor="let p of posts$" class="list-group-item">
+    <a href="#" [routerLink]="['/blog/detail/', p.id]" class="card-link"> {{ p.text }}</a></li>
+</ul>
