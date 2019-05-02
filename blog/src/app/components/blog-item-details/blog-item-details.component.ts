@@ -9,14 +9,12 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class BlogItemDetailsComponent implements OnInit {
 
-  public image: string;
+  public image= '';
   public text: string;
   public id: number;
 
-
   constructor(private dataService: DataService, private route: ActivatedRoute) {
   }
-
 
   ngOnInit() {
     let id: string;
