@@ -12,7 +12,7 @@ import { BlogItemComponent } from './components/blog-item/blog-item.component';
 import { BlogItemTextComponent } from './components/blog-item-text/blog-item-text.component';
 import { BlogItemImageComponent } from './components/blog-item-image/blog-item-image.component';
 import { BlogItemDetailsComponent } from './components/blog-item-details/blog-item-details.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {DataService} from './services/data.service';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { SearchBarComponent } from './shared/search-bar/search-bar.component';
@@ -21,6 +21,11 @@ import { BlogHomeComponent } from './blog-home/blog-home.component';
 import { TextFormatDirective } from './directives/text-format.directive';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SelectizeComponent } from './components/selectize/selectize.component';
+import { NewPostComponent } from './components/new-post/new-post.component';
+import { LoginComponent } from './components/login/login.component';
+import {AuthenticationService} from './services/authentication.service';
+import {HttpIntercepterBasicAuthService} from './services/interceptor-auth.service';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +45,8 @@ import { SelectizeComponent } from './components/selectize/selectize.component';
     TextFormatDirective,
     FilterPipe,
     SelectizeComponent,
+    NewPostComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,14 @@ import { SelectizeComponent } from './components/selectize/selectize.component';
     FormsModule,
   ],
   providers: [
-    DataService
+    DataService,
+    AuthenticationService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpIntercepterBasicAuthService,
+      multi: true
+    },
+
   ],
   bootstrap: [AppComponent]
 })
