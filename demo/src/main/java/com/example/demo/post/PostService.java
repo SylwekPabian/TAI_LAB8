@@ -12,7 +12,7 @@ public class PostService {
     private static int idCouter = 0;
 
     static {
-        posts.add(new Post(++idCouter,
+        posts.add(new Post(idCouter,
                 "title1",
                 "http://osnews.pl/wp-content/uploads/2016/06/it-grafika.jpg",
                 "Bacon ipsum dolor amet filet mignon drumstick picanha ribeye jerky pork belly cupim tail boudin" +
