@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class NewPostComponent implements OnInit {
 
-  public post = {title: String, url: String, content: String};
+  public post = {};
   constructor(private dataService: DataService, private router: Router) {
   }
 

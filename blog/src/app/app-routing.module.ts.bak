@@ -34,8 +34,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'add-post', 
-    component: AddPostComponent
+    path: 'add-post', component: AddPostComponent
   }
 ];
 

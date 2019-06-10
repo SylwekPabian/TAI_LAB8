@@ -3,17 +3,17 @@
   </div>
   <div class="col-sm-1 col-md-3 col-lg-2 col-xl-1">
     <li class="nav-item">
-      <a class="nav-link " href="facebook.com">
+      <a class="nav-link " href="index.html">
         <i class="fa fa-facebook" aria-hidden="true"></i>
         Facebook</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="instagram.com">
+      <a class="nav-link" href="#">
         <i class="fa fa-instagram" aria-hidden="true"></i>
         Instagram</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="gmail.com">
+      <a class="nav-link" href="#">
         <i class="fa fa-envelope-o" aria-hidden="true"></i>
         Email</a>
     </li>
