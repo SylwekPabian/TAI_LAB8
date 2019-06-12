@@ -14,6 +14,7 @@ const postSchema = new mongoose.Schema({
 postSchema.plugin(uniqueValidator);
 
 const PostModel = mongoose.model('sp-post', postSchema);
+//PostModel.collection.drop();
 
 async function query() {
   const result = await PostModel.find({});

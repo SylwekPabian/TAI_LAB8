@@ -10,9 +10,8 @@ import {DataService} from '../../services/data.service';
 export class AddPostComponent implements OnInit {
 
   public post = {
-    title: '',
-    url: '',
-    content: '',
+    image: '',
+    text: ''
   }
 
   constructor(private dataService: DataService, private router: Router) { }
